@@ -7,10 +7,6 @@
 ██████╔╝╚██████╔╝██║░╚███║
 ╚═════╝░░╚═════╝░╚═╝░░╚══╝                                            
 ]]
-
-NotifyLib.prompt('SUN LOCK - Q To Lock', 'Loading..', 5)
-NotifyLib.prompt('SUN LOCK', ' Made by $un#3554', 5)
-
 local Settings = {
     AimLock = {
         Enabled = true,
