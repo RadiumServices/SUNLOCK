@@ -18,7 +18,7 @@ local Settings = {
     Settings = {
         Thickness = 3.5,
         Transparency = 1,
-        Color = Color3.fromRGB(153, 50, 204),
+        Color = Color3.fromRGB(255, 0, 0),
         FOV = true
     }
  
