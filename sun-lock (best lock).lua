@@ -7,6 +7,10 @@
 ██████╔╝╚██████╔╝██║░╚███║
 ╚═════╝░░╚═════╝░╚═╝░░╚══╝                                            
 ]]
+
+NotifyLib.prompt('SUN LOCK - Q To Lock', 'Loading..', 5)
+NotifyLib.prompt('SUN LOCK', ' Made by $un#3554', 5)
+
 local Settings = {
     AimLock = {
         Enabled = true,
@@ -16,9 +20,9 @@ local Settings = {
         Notifications = false
     },
     Settings = {
-        Thickness = 3.5,
+        Thickness = 3,
         Transparency = 1,
-        Color = Color3.fromRGB(255, 0, 0),
+        Color = Color3.fromRGB(45, 194, 50),
         FOV = true
     }
  
