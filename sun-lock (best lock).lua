@@ -7,7 +7,7 @@
 ██████╔╝╚██████╔╝██║░╚███║
 ╚═════╝░░╚═════╝░╚═╝░░╚══╝                                            
 ]]
-local NotifyLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro/main/ui"))()
+local NotifyLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/strawbberrys/LuaScripts/main/NotificationLibrary.lua
 NotifyLib.prompt('SUN LOCK - Q To Lock and X to macro', 'Loading..', 5)
 NotifyLib.prompt('SUN LOCK', ' Made by $un#3554', 5)
 
