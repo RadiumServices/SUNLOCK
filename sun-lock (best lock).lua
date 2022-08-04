@@ -11,68 +11,33 @@ local NotifyLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Rad
 NotifyLib.prompt('SUN LOCK - Q To Lock and X to macro', 'Loading..', 5)
 NotifyLib.prompt('SUN LOCK', ' Made by $un#3554', 5)
 
-
-
-_G.Key = "x"
-local plr = game:GetService("Players").LocalPlayer
-local Mouse = plr:GetMouse()
-local On_Check = false
-local Item = plr.Backpack.Wallet
-local UAnimation = Instance.new("Animation")
-
-function stopTracks()
-	for _, v in next, game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):GetPlayingAnimationTracks() do
-		if (v.Animation.AnimationId:match("rbxassetid")) then
-			v:Stop()
-		end
-	end
+plr = game:GetService('Players').LocalPlayer
+down = true
+ 
+function onButton1Down(mouse)
+    down = true
+    while down do
+        if not down then break end
+        local char = plr.Character
+        char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * 190
+        wait()
+    end
 end
-
-function loadAnimation(id)
-	if UAnimation.AnimationId == id then
-		stopTracks()
-		UAnimation.AnimationId = "1"
-	else
-		UAnimation.AnimationId = id
-		local animationTrack = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):LoadAnimation(UAnimation)
-		animationTrack:Play()
-	end
+ 
+function onButton1Up(mouse)
+    down = false
 end
-
-Mouse.KeyDown:Connect(function(Key)
-	if Key == _G.Key then
-		On_Check = not On_Check
-		if On_Check == true then
-			stopTracks()
-			loadAnimation("rbxassetid://3189777795")
-			wait(1.5)
-			Item.Parent = plr.Character
-			wait(0.15)
-			plr.Character.Wallet.Parent = plr.Backpack
-			wait(0.05)
-			repeat game:GetService("RunService").Heartbeat:wait()
-				keypress(0x49)
-				game:GetService("RunService").Heartbeat:wait()
-				keypress(0x4F)
-				game:GetService("RunService").Heartbeat:wait()
-				keyrelease(0x49)
-				game:GetService("RunService").Heartbeat:wait()
-				keyrelease(0x4F)
-				game:GetService("RunService").Heartbeat:wait()
-				keypress(0x49)
-				game:GetService("RunService").Heartbeat:wait()
-				keypress(0x4F)
-				game:GetService("RunService").Heartbeat:wait()
-				keyrelease(0x49)
-				game:GetService("RunService").Heartbeat:wait()
-				keyrelease(0x4F)
-				game:GetService("RunService").Heartbeat:wait()
-			until On_Check == false
-		end
-	end
-end)
-
-
+ 
+function onSelected(mouse)
+    mouse.KeyDown:connect(function(h) if h:lower()=="h"then onButton1Down(mouse)end end)
+    mouse.KeyUp:connect(function(h) if h:lower()=="h"then onButton1Up(mouse)end end)
+end
+onSelected(game.Players.LocalPlayer:GetMouse())
+game.StarterGui:SetCore("SendNotification",{
+			Title = "Sun Lock - Speed";
+			Text = "Speed Enabled";
+			Duration = 0.80;
+		})
 
 local Settings = {
     AimLock = {
