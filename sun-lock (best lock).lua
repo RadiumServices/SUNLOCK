@@ -7,9 +7,6 @@
 ██████╔╝╚██████╔╝██║░╚███║
 ╚═════╝░░╚═════╝░╚═╝░░╚══╝                                            
 ]]
-local NotifyLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/RadiumServices/SUNLOCK/main/styleforsun.lua"))()
-NotifyLib.prompt('SUN LOCK - Q To Lock and X to macro', 'Loading..', 5)
-NotifyLib.prompt('SUN LOCK', ' Made by $un#3554', 5)
 
 plr = game:GetService('Players').LocalPlayer
 down = true
@@ -34,9 +31,9 @@ function onSelected(mouse)
 end
 onSelected(game.Players.LocalPlayer:GetMouse())
 game.StarterGui:SetCore("SendNotification",{
-			Title = "Sun Lock - Speed";
-			Text = "Speed Enabled";
-			Duration = 0.80;
+			Title = "Sun Lock";
+			Text = "Hold H to Speed, Press Q to Lock;
+			Duration = 1.00;
 		})
 
 local Settings = {
