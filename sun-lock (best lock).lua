@@ -272,7 +272,7 @@ end
 onSelected(game.Players.LocalPlayer:GetMouse())
 game.StarterGui:SetCore("SendNotification",{
 			Title = "Sun Lock";
-			Text = "Hold H to Speed, Press Q to Lock";
+			Text = "Press Q to Lock, ANIMATION PACK GIVEN (to macro)";
 			Duration = 1.00;
 		})
 
